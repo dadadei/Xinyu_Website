@@ -45,6 +45,21 @@ nav {
   font-size: 1.5rem;
 }
 
+.nav-links li a {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 2rem; 
+  font-weight: normal; 
+  color: black; 
+  font-style:oblique;
+}
+
+.nav-links li a:hover {
+  color: grey; /* Change hover color here */
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -60,6 +75,8 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+  font-style:oblique;
+  font-family: "Gill Sans", sans-serif;
 }
 
 .logo:hover {
@@ -93,6 +110,40 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
+#hamburger-nav .menu-links a {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1.5rem; 
+  font-weight: normal; 
+  color: black; 
+  font-style: oblique;
+  text-decoration: none; /* Ensure no underline by default */
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger-nav .menu-links a:hover {
+  color: grey; /* Change hover color */
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+
+#hamburger-nav .menu-links {
+  position: absolute;
+  top: 100%; /* Positions it below the hamburger icon */
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  font-family: "Gill Sans", sans-serif; /* Keeps the font consistent */ 
+}
+
+#hamburger-nav .menu-links.open {
+  max-height: 300px; /* Expands menu when open */
+}
+
 .menu-links {
   position: absolute;
   top: 100%;
@@ -102,6 +153,7 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
+  font-family: "Gill Sans", sans-serif;
 }
 
 .menu-links a {
@@ -116,6 +168,7 @@ a:hover {
 
 .menu-links li {
   list-style: none;
+
 }
 
 .menu-links.open {
@@ -158,6 +211,7 @@ section {
 
 .section-container {
   display: flex;
+  text-align: justify;
 }
 
 /* PROFILE SECTION */
@@ -187,16 +241,21 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0rem;
 }
 
 .section__text__p2 {
-  font-size: 1.75rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .title {
   font-size: 3rem;
   text-align: center;
+  font-style:oblique;
+  font-family: "Gill Sans", sans-serif;
 }
 
 #socials-container {
@@ -265,22 +324,22 @@ section {
 
 #about {
   position: relative;
-}
-
-.about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .about-details-container {
-  justify-content: center;
+  justify-content: justify;
   flex-direction: column;
+  display: flex;
+  align-items: center; 
 }
 
 .about-containers,
 .about-details-container {
   display: flex;
+  justify-content: center; 
+  gap: 2rem;
 }
 
 .about-pic {
@@ -295,17 +354,22 @@ section {
 
 .details-container {
   padding: 1.5rem;
+  width: 80%;
+  max-width: 600px;
   flex: 1;
   background: white;
-  border-radius: 2rem;
+  border-radius: 1rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  margin-top: 30px;
+  justify-content: center;
 }
 
 .section-container {
-  gap: 4rem;
+  gap: 10rem;
   height: 80%;
+  text-align: justify;
 }
 
 .section__pic-container {
@@ -313,6 +377,34 @@ section {
   width: 400px;
   margin: auto 0;
 }
+
+.text-container p {
+  color: black; 
+  font-size: large;
+  font-family: "Gill Sans", sans-serif;
+}
+
+/* Italicize "Experience" */
+.italic-title {
+  font-style: italic;
+  text-align: center;
+  font-size: large;
+  margin-bottom: 0rem;
+  font-family: "Gill Sans", sans-serif;
+}
+
+/* Change "3+ years Accountant" text color*/
+.highlight {
+  color: black;
+  text-align: center;
+  font-size: larger;
+  margin-bottom: 0rem;
+  color: rgb(85, 85, 85);
+  font-family: "Gill Sans", sans-serif;
+  margin-top: 10px;
+}
+
+
 
 /* EXPERIENCE SECTION */
 
@@ -325,6 +417,7 @@ section {
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
+  font-family: "Gill Sans", sans-serif;
 }
 
 .experience-details-container {
@@ -340,6 +433,17 @@ section {
   flex-direction: row;
   gap: 2.5rem;
   justify-content: space-around;
+  font-size: medium;
+  font-family: "Gill Sans", sans-serif;
+  font-style: italic;
+
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-rows: repeat(4, auto); /* Four rows */
+  gap: 20px; /* Space between grid items */
+  justify-items: center; /* Center align items horizontally */
+  text-align: center; /* Ensure proper text alignment */
 }
 
 article {
@@ -351,33 +455,6 @@ article {
 
 article .icon {
   cursor: default;
-}
-
-/* PROJECTS SECTION */
-
-#projects {
-  position: relative;
-}
-
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
-}
-
-.project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
-}
-
-.project-title {
-  margin: 1rem;
-  color: black;
-}
-
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
 }
 
 /* CONTACT */
@@ -409,7 +486,8 @@ article .icon {
 }
 
 .contact-info-container p {
-  font-size: larger;
+  font-size: large;
+  font-family: "Gill Sans", sans-serif;
 }
 
 .contact-icon {
@@ -428,5 +506,61 @@ footer {
 }
 
 footer p {
+  text-align:center;
+  font-size: large;
+  font-family: "Gill Sans", sans-serif;
+  color:black;
+  margin-bottom: 10px;
+
+}
+
+/*Xinyu Zhang text cursor effect*/
+.title {
+  font-size: 3rem;
   text-align: center;
+  font-family: "Gill Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#text {
+  color: black; 
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+
+.cursor {
+  font-weight: bold;
+  font-size: 3rem;
+  color: black; 
+  animation: blink 0.7s steps(1) infinite;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/*Xinyu Zhang text typing effect*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  font-style: oblique;
+  font-family: "Gill Sans", sans-serif;
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 6s ease-out forwards; 
 }

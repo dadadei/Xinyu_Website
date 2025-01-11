@@ -3,9 +3,11 @@
     height: 83vh;
     margin-bottom: 6rem;
   }
-  .about-containers {
-    flex-wrap: wrap;
+  
+  #profile .section__pic-container {
+    margin-top: 100px;
   }
+
   #contact,
   #projects {
     height: fit-content;
@@ -27,6 +29,11 @@
   .section-container {
     display: block;
   }
+
+  #profile .section__pic-container {
+    margin-top: 100px;
+  }
+
   .arrow {
     display: none;
   }
@@ -42,9 +49,7 @@
     height: 275px;
     margin: 0 auto 2rem;
   }
-  .about-containers {
-    margin-top: 0;
-  }
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -56,6 +61,11 @@
     height: 83vh;
     margin-bottom: 0;
   }
+
+  #profile .section__pic-container {
+    margin-top: 100px;
+  }
+
   article {
     font-size: 1rem;
   }
@@ -63,7 +73,7 @@
     height: fit-content;
     margin-bottom: 2rem;
   }
-  .about-containers,
+  
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
@@ -98,6 +108,6 @@
     font-size: 2rem;
   }
   .text-container {
-    text-align: justify;
+    text-align:justify;
   }
 }
